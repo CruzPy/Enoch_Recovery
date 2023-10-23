@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Thank You for Your Submission</title>
+</head>
+<body>
+    <div class="w3-row w3-padding-64">
+        <h1>Thank You {{ first_name }},</h1>
+        <p>We look foward to meeting you on <b>{{ date }}</b> at <b>{{ appt }}</b></p>
+    </div>
+</body>
+</html>
+{% endblock %}
