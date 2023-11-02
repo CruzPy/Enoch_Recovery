@@ -6,20 +6,22 @@ def home(request):
 
 def submitted(request):
     if request.method == 'POST':
-        first_name = request.POST.get('first_name')
-        last_name = request.POST.get('last_name')
+        first_name = request.POST.get('fname')
+        last_name = request.POST.get('lname')
         email = request.POST.get('email')
-        cell = request.POST.get('cell')
+        phone = request.POST.get('phone')
         date = request.POST.get('date')
-        appt = request.POST.get('appt')
+        time = request.POST.get('time')
+        choice = request.POST.get('choice')
 
         context = {
             'first_name': first_name,
             'last_name': last_name,
             'email': email,
-            'cell': cell,
+            'phone': phone,
             'date': date,
-            'appt': appt,
+            'time': time,
+            'choice' : choice,
         }
         return render(request, 'submitted.html', context)
     return redirect('home')  # Redirect to the home view if it's not a POST request

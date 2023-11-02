@@ -7,8 +7,12 @@
 </head>
 <body>
     <div class="w3-row w3-padding-64">
-        <h1>Thank You {{ first_name }},</h1>
-        <p>We look foward to meeting you on <b>{{ date }}</b> at <b>{{ appt }}</b></p>
+        <h1>Thank You {{ first_name }} {{ last_name }},</h1>
+        <p>We look foward to meeting you on <b>{{ date }}</b> at <b>{{ time }}</b></p>
+        <p>here is a summary of your info<p>
+            <p>Email: {{ email }}<p>
+            <p>Phone: {{ phone }}<p>
+            <p>Problem: {{ choice }}<p>
     </div>
 </body>
 </html>
