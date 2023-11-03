@@ -6,7 +6,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Enoch Recovery DDP</title>
 <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 <link href="{% static "index.css" %}" rel="stylesheet">
 
@@ -24,7 +23,7 @@
     <div class="w3-col m6 w3-padding-large">
       <h1 class="w3-center">About our program</h1><br>
       <h5 class="w3-center">Tradition since 1993</h5>
-      <p class="w3-large">Enoch Recovery DDP Center is dedicated to providing comprehensive therapy to individuals facing alcohol and drug addictions. We focus on instilling a positive belief system that incorporates morals, values, and principles, aiming to develop men and women of integrity. The facilities at Enoch Recovery DDP Center are safe, comfortable, and have a beautiful ambiance. Moreover, Enoch Recovery DDP Center emphasizes education rather than punishment for those who choose to drink and drive. You can trust that you will be treated with the utmost kindness, courtesy, and respect during your time at the center. We believe in the potential for growth and second chances in life, understanding that people can make mistakes and deserve respect and support on their journey towards <span class="w3-tag w3-light-grey">recovery</span></p>
+      <p class="w3-center">Enoch Recovery DDP Center is dedicated to providing comprehensive therapy to individuals facing alcohol and drug addictions. We focus on instilling a positive belief system that incorporates morals, values, and principles, aiming to develop men and women of integrity. The facilities at Enoch Recovery DDP Center are safe, comfortable, and have a beautiful ambiance. Moreover, Enoch Recovery DDP Center emphasizes education rather than punishment for those who choose to drink and drive. You can trust that you will be treated with the utmost kindness, courtesy, and respect during your time at the center. We believe in the potential for growth and second chances in life, understanding that people can make mistakes and deserve respect and support on their journey towards <span class="w3-tag w3-light-grey">recovery</span></p>
     </div>
   </div>
   
@@ -52,30 +51,31 @@
 </div>
 
     
-    <div class="w3-col l6 w3-padding-large">
-        <img src="{% static 'images/class.jpg' %}" class="w3-round w3-image w3-opacity-min" alt="Class" width="600" height="750">
-    </div>
+<div class="w3-col l6 w3-padding-large">
+    <img src="{% static 'images/class.jpg' %}" class="w3-round w3-image w3-opacity-min" alt="Class" width="600" height="750">
+</div>
+
+<!-- Contact Section -->
+<div class="w3-row w3-padding-64" id="contact">
+<h1>Contact Us</h1>
+  <div class="w3-col m6 w3-padding-large w3-hide-small">
+    <iframe class="w3-round w3-image w3-opacity-min" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3015.5782701820253!2d-73.86897192331467!3d40.90306502589565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2f2e7706c9473%3A0x46c5e01bebded1ad!2sEnoch%20Recovery%20DDP%20Center!5e0!3m2!1sen!2sus!4v1698948003324!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div>
 
-  <hr>
-
-  <!-- Contact Section -->
-  <div class="w3-container w3-padding-64" id="contact">
-    <h1>Contact Us</h1>
-    <p> We offer a variety of services. We understand your needs and we will strive to satisfy them all. <br>Please fill the form below to meet with us at:</p>
-    <div class="geodir-category-location">
-    <a href="https://maps.google.com/?saddr=Current+Location&amp;daddr=957+McLean+Avenue,+Suite+103,+Yonkers,+NY+10704&amp;hl=en&amp;iwloc=A" title="Directions to Enoch Recovery DDP Center" class="get-direction" target="_blank">
-    <i class="fas fa-directions"></i>
-    <b>957 McLean Avenue, Suite 103, Yonkers, NY 10704</b>
-</a>
+  <div class="w3-col m6 w3-padding-large w3-hide-small">
+    <div id="info">
+      <p>Contact us: <b>(917) 635-2875</b></p>
+      <p>Hours: <b>Mon & Wed: 5:30am - 8pm, Sat: 9:30am - 11am</b></p>
+      <p>Closed on <b>Tue, Thu, Fri & Sun</b></p>
+    </div>
+  </div>
 </div>
-    <p>Contact us: <b>(917) 635-2875</b></p>
-    <p>Hours: <b>Mon & Wed: 5:30am - 8pm, Sat: 9:30am - 11am</b></p>
-    <p>Closed on <b>Tue, Thu, Fri & Sun</b></p>
 
-    <br>
-    <br>
 
+
+<br>
+
+<!-- Multistep Contact Form -->
 <form id="regForm" action="/submitted/" method='POST'>
 {% csrf_token %} <!-- Include the CSRF token for security -->
   <h1>Schedule a meeting:</h1>

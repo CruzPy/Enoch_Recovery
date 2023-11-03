@@ -24,4 +24,6 @@ def submitted(request):
             'choice' : choice,
         }
         return render(request, 'submitted.html', context)
-    return redirect('home')  # Redirect to the home view if it's not a POST request
+    
+    else:
+        return redirect('home')  # Redirect to the home view if it's not a POST request
