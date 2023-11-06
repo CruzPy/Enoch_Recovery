@@ -1,8 +1,8 @@
-* {
-    box-sizing: border-box;
-}
+
 body {
-      font-family: "Times New Roman", Georgia, Serif;
+    font-family: "Times New Roman", Georgia, Serif;
+    background-color: #f1f1f1;
+    scroll-behavior: smooth;
   }
   
   h1,
@@ -14,10 +14,6 @@ body {
       font-family: "Playfair Display";
       letter-spacing: 5px;
   }
-
-body {
-    background-color: #f1f1f1;
-}
 
 
 h1 {
@@ -79,4 +75,27 @@ button:hover {
 /* Mark the steps that are finished and valid: */
 .step.finish {
     background-color: #04AA6D;
+}
+
+/* Apply basic styles to the video container */
+.video-container {
+    position: relative;
+    width: 100%;
+    /* Occupy full width of the screen */
+    height: 70vh;
+    /* Set your desired video height, 70vh takes up 70% of the viewport height */
+    overflow: hidden;
+}
+
+/* Style the video element within the container */
+video {
+    width: 100%;
+    /* Occupy full width of the container */
+    height: 100%;
+    /* Occupy full height of the container */
+    object-fit: cover;
+    /* Maintain aspect ratio and cover the container */
+    position: absolute;
+    top: 0;
+    left: 0;
 }
