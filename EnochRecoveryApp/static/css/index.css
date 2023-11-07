@@ -1,19 +1,18 @@
-
 body {
     font-family: "Times New Roman", Georgia, Serif;
     background-color: #f1f1f1;
     scroll-behavior: smooth;
-  }
-  
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-      font-family: "Playfair Display";
-      letter-spacing: 5px;
-  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Playfair Display";
+    letter-spacing: 5px;
+}
 
 
 h1 {
@@ -88,7 +87,7 @@ button:hover {
 }
 
 /* Style the video element within the container */
-video {
+#video {
     width: 100%;
     /* Occupy full width of the container */
     height: 100%;
@@ -96,6 +95,4 @@ video {
     object-fit: cover;
     /* Maintain aspect ratio and cover the container */
     position: absolute;
-    top: 0;
-    left: 0;
 }
