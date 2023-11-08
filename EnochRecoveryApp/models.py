@@ -3,7 +3,7 @@ from phone_field import PhoneField
 
 
 # Create your models here.
-class Customer(models.Model):
+class OrientationRequest(models.Model):
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
     email = models.EmailField(max_length=100)

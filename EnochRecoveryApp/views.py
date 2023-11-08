@@ -1,21 +1,25 @@
 from django.shortcuts import render, redirect
-from .forms import CustomerForm
+from .forms import OrientationRequest
 
 
 # Create your views here.
 def home(request):
-    return render(request, "index.html")
+    form = OrientationRequest()
+    context = {
+        "form": form,
+    }
+    return render(request, "index.html", context)
 
 
 def testform(request):
     if request.method == "POST":
-        form = CustomerForm(request.POST)
+        form = OrientationRequest(request.POST)
         if form.is_valid():
             form.save()
             return render(request, "submitted.html", {"form": form})
 
     else:
-        form = CustomerForm()
+        form = OrientationRequest()
         return render(request, "testform.html", {"form": form})
 
 

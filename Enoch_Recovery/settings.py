@@ -77,11 +77,14 @@ WSGI_APPLICATION = "Enoch_Recovery.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        "ENGINE": "django.db.backends.mysql",
+        "NAME": "enochrecovery",
+        "USER": "etorres",
+        "PASSWORD": "admin",
+        "HOST": "localhost",  # Use 'localhost' for the local database
+        "PORT": "3306",  # Leave empty to use the default MySQL port (3306)
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
