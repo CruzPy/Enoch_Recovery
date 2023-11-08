@@ -1,9 +1,22 @@
 from django.shortcuts import render, redirect
+from .forms import CustomerForm
 
 
 # Create your views here.
 def home(request):
     return render(request, "index.html")
+
+
+def testform(request):
+    if request.method == "POST":
+        form = CustomerForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return render(request, "submitted.html", {"form": form})
+
+    else:
+        form = CustomerForm()
+        return render(request, "testform.html", {"form": form})
 
 
 def submitted(request):

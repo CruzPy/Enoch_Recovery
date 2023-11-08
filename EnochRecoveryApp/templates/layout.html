@@ -12,9 +12,10 @@
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
   <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
-    <a href="{{ index.html }}" class="w3-bar-item w3-button">Enoch Recovery DDP</a>
+    <a href="{% url 'home' %}" class="w3-bar-item w3-button">Enoch Recovery DDP</a>
     <!-- Right-sided navbar links. Hide them on small screens -->
     <div class="w3-right w3-hide-small">
+      <a href = "{% url 'testform' %}" class="w3-bar-item w3-button">Orientation</a>
       <a href="#about" class="w3-bar-item w3-button">About</a>
       <a href="#testimonials" class="w3-bar-item w3-button">Testimonials</a>
       <a href="#contact" class="w3-bar-item w3-button">Contact</a>
