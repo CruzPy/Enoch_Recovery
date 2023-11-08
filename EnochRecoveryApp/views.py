@@ -1,10 +1,10 @@
 from django.shortcuts import render, redirect
-from .forms import OrientationRequest
+from .forms import OrientationRequestForm
 
 
 # Create your views here.
 def home(request):
-    form = OrientationRequest()
+    form = OrientationRequestForm()
     context = {
         "form": form,
     }
@@ -13,36 +13,24 @@ def home(request):
 
 def testform(request):
     if request.method == "POST":
-        form = OrientationRequest(request.POST)
+        form = OrientationRequestForm(request.POST)
         if form.is_valid():
             form.save()
             return render(request, "submitted.html", {"form": form})
 
     else:
-        form = OrientationRequest()
+        form = OrientationRequestForm()
         return render(request, "testform.html", {"form": form})
 
 
 def submitted(request):
     if request.method == "POST":
-        first_name = request.POST.get("fname")
-        last_name = request.POST.get("lname")
-        email = request.POST.get("email")
-        phone = request.POST.get("phone")
-        date = request.POST.get("date")
-        time = request.POST.get("time")
-        location = request.POST.get("location")
+        form = OrientationRequestForm(request.POST)
+        if form.is_valid():
+            form.save()  # Save to DB
+            return render(request, "submitted.html", {"form": form})
 
-        context = {
-            "first_name": first_name,
-            "last_name": last_name,
-            "email": email,
-            "phone": phone,
-            "date": date,
-            "time": time,
-            "location": location,
-        }
-        return render(request, "submitted.html", context)
-
-    else:
-        return redirect("home")  # Redirect to the home view if it's not a POST request
+        else:
+            print("Form is invalid")
+        
+    return redirect("home")  # Redirect to the home view if it's not a POST request

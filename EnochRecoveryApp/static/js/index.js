@@ -73,8 +73,8 @@ function fixStepIndicator(n) {
 
 // Modify the function to populate time slots based on the schedule
 function setDefaultDateTime() {
-    var dateInput = document.getElementById("date");
-    var timeSelect = document.getElementById("time");
+    var dateInput = document.getElementById("id_date");
+    var timeSelect = document.getElementById("id_time");
 
     // Check if a date is selected
     if (dateInput.value) {
@@ -109,7 +109,7 @@ function setDefaultDateTime() {
 
 // Modify the function to set the default date to today when the page is loaded
 function setDefaultDate() {
-    var dateInput = document.getElementById("date");
+    var dateInput = document.getElementById("id_date");
 
     var today = new Date();
     var year = today.getFullYear();
@@ -124,7 +124,7 @@ function setDefaultDate() {
 
 // Function to validate the date input
 function validateDate() {
-    var dateInput = document.getElementById("date");
+    var dateInput = document.getElementById("id_date");
     var today = new Date();
     var selectedDate = new Date(dateInput.value);
 
@@ -176,11 +176,11 @@ setDefaultDate();
 setDefaultDateTime();
 
 // Add an event listener to the date input to update time options when the date changes
-document.getElementById("date").addEventListener("change", setDefaultDateTime);
+document.getElementById("id_date").addEventListener("change", setDefaultDateTime);
 
 
 // Add an event listener to the date input to validate the date
-document.getElementById("date").addEventListener("change", validateDate);
+document.getElementById("id_date").addEventListener("change", validateDate);
 
 var shortText = document.getElementById('short-text');
 var fullText = document.getElementById('full-text');
