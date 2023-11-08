@@ -1,4 +1,3 @@
-
 {% extends "layout.html" %}
 {% block content %}
 {% load static %}
@@ -6,127 +5,185 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-<link href="{% static "css/index.css" %}" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link href="{% static "css/index.css" %}" rel="stylesheet">
 </head>
 <body>
 <!-- Page content -->
-<div class="w3-content" style="max-width:1100px">
-  <div class="video-container">
-    <iframe id="video" src="https://drive.google.com/file/d/16h9mHOCBZ5yRbLEJLu0-mJ30w0WFKVUj/preview" frameborder="0" allow="autoplay" allowfullscreen controls autoplay></iframe>
-  </div>
+<div class="w3-content fadeIn" style="max-width:1100px">
+
   <!-- About Section -->
-  <div class="w3-row w3-padding-64" id="about">
+  <div class="w3-row w3-padding-64 fadeIn" id="about">
     <div class="w3-col m6 w3-padding-large w3-hide-small">
-        <img src="{% static 'images/group.jpg' %}" class="w3-round w3-image w3-opacity-min" alt="Class" width="600" height="750">
+      <img src="{% static 'images/group.jpg' %}" class="w3-round w3-image w3-opacity-min" alt="Class" width="600" height="750">
     </div>
-
     <div class="w3-col m6 w3-padding-large">
-      <h1 class="w3-center">About our program</h1><br>
-      <h5 class="w3-center">Tradition since 1993</h5>
-      <p class="w3-center">Enoch Recovery DDP Center is dedicated to providing comprehensive therapy to individuals facing alcohol and drug addictions. We focus on instilling a positive belief system that incorporates morals, values, and principles, aiming to develop men and women of integrity. The facilities at Enoch Recovery DDP Center are safe, comfortable, and have a beautiful ambiance. Moreover, Enoch Recovery DDP Center emphasizes education rather than punishment for those who choose to drink and drive. You can trust that you will be treated with the utmost kindness, courtesy, and respect during your time at the center. We believe in the potential for growth and second chances in life, understanding that people can make mistakes and deserve respect and support on their journey towards <span class="w3-tag w3-light-grey">recovery</span></p>
+      <h1 class="w3-center">Welcome to Enoch Recovery DDP Center</h1><br>
+      <p class="w3-center">Our Impaired Driver Program (IDP), also known as the Drinking Driver Program (DDP), is dedicated to helping individuals on their journey to recovery from alcohol and drug-related issues. We provide comprehensive therapy and support to empower you to make positive changes and build a better future.</p>
+      <p>To participate in our IDP program, you'll need to follow these steps:</p>
+      <ul>
+        <li>In order to qualify for the IDP, also known as the Drinking Driver Program (DDP), you need a DUI conviction. After your conviction, you'll receive a letter from DMV indicating your eligibility for the program.</li>
+        <li>Visit your local DMV office and pay a <strong>$75 enrollment fee</strong>. Be sure to inform them that you'll be attending Enoch Recovery DDP Center.</li>
+        <li>DMV will provide you with an instruction sheet about our school and payment process, along with our schedule.</li>
+        <li>The IDP program consists of <strong>seven weekly sessions</strong> each lasting <strong>two hours</strong> and requiring a <strong>$233 program fee</strong>.</li>
+      </ul>
     </div>
+
   </div>
-  
   <hr>
-  
-<!-- Testimonials Section -->
-<div class="w3-row w3-padding-64" id="testimonials">
-  <div class="w3-col l6 w3-padding-large">
-    <h1 class="w3-center">Testimonials</h1><br>
-    <h4>John Smith</h4>
-    <p class="w3-text-grey">The DDP was a life-changing experience. It helped me get back on track and make better choices. Highly recommended!</p><br>
 
-    <h4>Alice Johnson</h4>
-    <p class="w3-text-grey">I am so grateful for the DDP. It provided the support and resources I needed to turn my life around after a difficult period. Thank you!</p><br>
 
-    <h4>Michael Brown</h4>
-    <p class="w3-text-grey">The DDP team was incredibly supportive throughout the program. I learned valuable lessons and gained a fresh perspective on life.</p><br>
 
-    <h4>Susan Davis</h4>
-    <p class="w3-text-grey">I can't thank the DDP enough for helping me make positive changes. It's a great program for those seeking a second chance.</p><br>
-
-    <h4>Robert Clark</h4>
-    <p class="w3-text-grey">The DDP is a beacon of hope for anyone looking to move past their mistakes and build a better future. I'm proof that it works!</p>
-  </div>
+<!-- Enoch Section -->
+<div class="w3-col m6 w3-padding-large">
+  <img src="{% static 'images/class.jpg' %}" class="w3-round w3-image w3-opacity-min" alt="Class" width="600" height="750">
 </div>
 
-    
-<div class="w3-col l6 w3-padding-large">
-    <img src="{% static 'images/class.jpg' %}" class="w3-round w3-image w3-opacity-min" alt="Class" width="600" height="750">
-</div>
-
-<!-- Contact Section -->
-<div class="w3-row w3-padding-64" id="contact">
-<h1>Contact Us</h1>
-  <div class="w3-col m6 w3-padding-large w3-hide-small">
-    <iframe class="w3-round w3-image w3-opacity-min" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3015.5782701820253!2d-73.86897192331467!3d40.90306502589565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2f2e7706c9473%3A0x46c5e01bebded1ad!2sEnoch%20Recovery%20DDP%20Center!5e0!3m2!1sen!2sus!4v1698948003324!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-  </div>
-
-  <div class="w3-col m6 w3-padding-large w3-hide-small">
-    <div id="info">
-      <p>Contact us: <b>(917) 635-2875</b></p>
-      <p>Hours: <b>Mon & Wed: 5:30am - 8pm, Sat: 9:30am - 11am</b></p>
-      <p>Closed on <b>Tue, Thu, Fri & Sun</b></p>
+<div class="w3-col m6 w3-padding-large">
+  <h1 class="w3-center" id="msg">Message From Our Director</h1><br>
+  <div class="w3-text-container">
+    <div class="w3-text-content" id="short-text">
+      <p>
+        Hey there, I'm Enoch Torres, and I've been on a unique journey for over 30 years now. I've been helping folks who've hit a bump in the road due to DUI convictions, and it's been quite a ride. Enoch Recovery DDP Center is where it all happens, and we're more like a big support system for people who need a fresh start.
+      </p>
     </div>
+    <div class="w3-text-expander" id="full-text" style="display: none;">
+      <p>
+        Hey there, I'm Enoch Torres, and I've been on a unique journey for over 30 years now. I've been helping folks who've hit a bump in the road due to DUI convictions, and it's been quite a ride. Enoch Recovery DDP Center is where it all happens, and we're more like a big support system for people who need a fresh start.
+        
+        <br><br>
+        I've seen so many people transform their lives with our Impaired Driver Program (IDP), which is also known as the Drinking Driver Program (DDP). The name might be new, but the aim remains the same. It's inspiring to see lives take a turn for the better.
+        <br><br>
+        Our place is all about hope, understanding, and second chances. We know life can throw you a curveball, and that's where we step in.
+        <br><br>
+        So, if you've got a DUI conviction in your rearview mirror, don't let it steer your life. Hop on the path to recovery and take control. Just scroll down to the bottom of this page, fill out the form below to reserve your spot for your free orientaion. This is where we will teach you about our Impaired Driver Program (or Drinking Driver Program, whichever you prefer). You've got the power to get back on track and drive toward a brighter future.
+        <br><br>
+        Enoch Recovery DDP Center is here to guide you, educate you, and hand you the keys to your future. Don't wait; start your journey to a better tomorrow today.
+        <br><br>
+        Catch you on the flip side,
+        <br>
+        Enoch Torres<br>
+        Founder and Owner, Enoch Recovery DDP Center
+      </p>
+    </div>
+    <a href="javascript:void(0);" id="read-more-link" onclick="toggleText()">Read More</a>
   </div>
 </div>
-
-
 
 <br>
 
+<!-- Testimonials Section -->
+<div class="w3-row w3-padding-64 fadeIn" id="testimonials">
+  <h1 class="w3-center">Success Stories</h1>
+
+  <div class="w3-content w3-display-container">
+    <!-- Testimonial 1 -->
+    <div class="mySlides">
+      <img src="{% static 'images/t1.jpg' %}" alt="Testimonial 1" style="width:100%">
+      <div class="w3-center w3-padding-16">
+        <h4>Chino</h4>
+        <p class="w3-text-grey">The DDP was a life-changing experience. It helped me get back on track and make better choices. Highly recommended!</p>
+      </div>
+    </div>
+
+    <!-- Testimonial 2 -->
+    <div class="mySlides">
+      <img src="{% static 'images/t2.jpg' %}" alt="Testimonial 2" style="width:100%">
+      <div class="w3-center w3-padding-16">
+        <h4>Daisy</h4>
+        <p class="w3-text-grey">I am so grateful for the DDP. It provided the support and resources I needed to turn my life around after a difficult period. Thank you!</p>
+      </div>
+    </div>
+
+    <!-- Testimonial 3 -->
+    <div class="mySlides">
+      <img src="{% static 'images/t3.jpg' %}" alt="Testimonial 3" style="width:100%">
+      <div class="w3-center w3-padding-16">
+        <h4>Chris</h4>
+        <p class="w3-text-grey">Enrolling in the DDP program at Enoch Recovery was a turning point in my life. The program's supportive environment and dedicated staff helped me make positive changes and build a brighter future.</p>
+      </div>
+    </div>
+
+  <div class="video-container">
+  <!-- Place your video iframe here -->
+  <iframe src="https://drive.google.com/file/d/1A-pwWvWQlDmdfSzftqMuhB8KWUnu_rgk/preview" frameborder="0" allow="autoplay" allowfullscreen></iframe>
+</div>
+</div>
+
+<!-- Contact Section -->
+<div class="w3-row fadeIn"  id="contact">
+<h1>Contact Us</h1>
+<h4>Please fill out the form below or call us directly to schedule a <strong>free</strong> orientation</h4>
+
+
+
+<div class="w3-row fadeIn">
+    <div class="w3-col m6 w3-padding-large w3-hide-small">
+      <h5>Cell: <b>(917) 635-2875</b></h5>
+      <h5>Email: <b>justint140@hotmail.com</b></h5>
+    </div>
+    <div class="w3-col m6 w3-padding-large w3-hide-small">
+      <h5>Orientation Hours: </h5><p><b>Mon, Tues, Wed: 5:30pm - 6:30pm <br>Sat: 10am - 12pm <br>Sun: 2:30pm - 3:30pm</b></p>
+    </div>
+
+  </div>
+</div>
+<div class="w3-row w3-padding-64 fadeIn">
+  <div class="w3-col m6 w3-padding-large w3-hide-small">
+    <iframe class="w3-round w3-image w3-opacity-min" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3015.5782701820253!2d-73.86897192331467!3d40.90306502589565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2f2e7706c9473%3A0x46c5e01bebded1ad!2sEnoch%20Recovery%20DDP%20Center!5e0!3m2!1sen!2sus!4v1698948003324!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div id="info">
+      <h3><u>Yonkers, NY</u></h3>
+      <p>957 McLean Ave, Yonkers, NY 10704 Suite 102</p>
+    </div>
+  </div>
+
+  <div class="w3-col m6 w3-padding-large w3-hide-small">
+    <iframe class="w3-round w3-image w3-opacity-min" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1510.1544692547584!2d-73.94598731883863!3d40.79920447562772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2f60f81cf0aef%3A0xf6cf32c7969f7ffc!2s55%20E%20115th%20St%2C%20New%20York%2C%20NY%2010029!5e0!3m2!1sen!2sus!4v1699402292083!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div id="info">
+      <h3><u>New York, NY</u></h3>
+      <p>55 E 115th St, New York, NY 10029 Level-C</p>
+    </div>
+  
+  </div>
+</div>
 <!-- Multistep Contact Form -->
 <form class="w3-input w3-padding-16" id="regForm" action="/submitted/" method='POST'>
 {% csrf_token %} <!-- Include the CSRF token for security -->
-  <h1>Schedule a meeting:</h1>
+<h3 class="w3-center">Schedule an orientation</h3>
+<div class="tab">
+  <h5 class="w3-left">When can you meet us for your <b>free</b> orientation?</h5>
+  <input class="w3-input w3-padding-16" type="date" id="date" name="date">
+  <select class="w3-input w3-padding-16" id="time" name="time" required>
+    <!-- Time options will be dynamically populated based on the selected date -->
+  </select>
+
+</div>
+
+<div class="tab">
+  <h5 class="w3-left">Which location is best for you?</h5>
+  <select class="w3-input w3-padding-16" id="location" name="location">
+      <option value="957 McLean Ave, Yonkers, NY 10704 Suite 102">957 McLean Ave, Yonkers, NY 10704 Suite 102</option>
+      <option value="55 E 115th St, New York, NY 10029 Level-C">55 E 115th St, New York, NY 10029 Level-C</option>
+  </select>
+</div>
+
   <!-- One "tab" for each step in the form: -->
-  <div class="tab">
-    <input class="w3-input w3-padding-16" type="date" id="date" name="date">
-    <select class="w3-input w3-padding-16" id="time" name="time" required>
-        <option value="09:00">09:00 AM</option>
-        <option value="10:00">10:00 AM</option>
-        <option value="11:00">11:00 AM</option>
-        <option value="12:00">12:00 PM</option>
-        <option value="13:00">01:00 PM</option>
-        <option value="14:00">02:00 PM</option>
-        <option value="15:00">03:00 PM</option>
-        <option value="16:00">04:00 PM</option>
-        <option value="17:00">05:00 PM</option>
-    </select>
+<div class="tab">
+  <p><input placeholder="First name..." oninput="this.className = ''" name="fname"></p>
+  <p><input placeholder="Last name..." oninput="this.className = ''" name="lname"></p>
+  <p><input placeholder="E-mail..." oninput="this.className = ''" name="email"></p>
+  <p><input placeholder="Phone..." oninput="this.className = ''" name="phone"></p>
+    <p class="w3-left">
+    By submitting this form, you agree that Enoch Recovery DDP Center may contact you via your provided phone number (call/text) or email to provide information related to the IDP/DDP program and other relevant services.
     </p>
-  </div>
-
-  <div class="tab">
-    <p><input placeholder="First name..." oninput="this.className = ''" name="fname"></p>
-    <p><input placeholder="Last name..." oninput="this.className = ''" name="lname"></p>
-  </div>
-  
-  <div class="tab">
-    <p><input placeholder="E-mail..." oninput="this.className = ''" name="email"></p>
-    <p><input placeholder="Phone..." oninput="this.className = ''" name="phone"></p>
-  </div>
-
-  <div class="tab">
-    <p>
-    <h5><label for="reason" class="w3-input w3-padding-16">Please choose which of these best relate to your inquiry</label></h5>
-    <select class="w3-select w3-padding-16" id="choice" name="choice" required>
-        <option value="1">Alcohol/ Drug Addictions</option>
-        <option value="2">Dwi Convictions</option>
-        <option value="3">DWI/DWAI</option>
-    </select>
-    </p>
-  </div>
-
-  <div style="text-align:center;margin-top:40px;">
-    <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
-    <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
-  </div>
+</div>
+<div style="text-align:center;margin-top:40px;">
+  <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+  <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+</div>
 
   <!-- Circles which indicates the steps of the form: -->
   <div style="text-align:center;margin-top:40px;">
-    <span class="step"></span>
     <span class="step"></span>
     <span class="step"></span>
     <span class="step"></span>
