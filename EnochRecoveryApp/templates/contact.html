@@ -1,0 +1,93 @@
+{% extends "layout.html" %}
+{% block content %}
+{% load static %}
+
+<!-- Page content -->
+<div class="w3-content fadeIn" style="max-width:1100px">
+<!-- Contact Section -->
+<div class="w3-row fadeIn"  id="contact">
+  <h1>Contact Us</h1>
+  <div class="w3-col m6 w3-padding-large">
+    <h4>Please fill out the form below or call us directly to schedule a <strong>free</strong> orientation</h4>
+  </div>
+  <div class="w3-col m6 w3-padding-large">
+    <h5>Email: <a href="mailto:justint140@hotmail.com"><b>justint140@hotmail.com</a></b></h5>
+    <h5>Cell: <b><a href="tel:9176352875">(917) 635-2875</b></a></h5>
+  </div>
+</div>
+
+<div class="w3-row w3-padding-16 fadeIn">
+  <div class="w3-col m6 w3-padding-large">
+    <h5>Orientation Hours: </h5><p><b>Mon, Tues, Wed: 5:30pm - 6:30pm <br>Sat: 10:00am - 12:00pm <br>Sun: 2:30pm - 3:30pm</b></p>
+    <p>All students must receive orientation before registering for the class. It is held in person and takes about <b>20 minutes</b></p>
+    <br>
+<!-- Multistep Contact Form -->
+<div class="w3-row w3-padding fadeIn">
+  <form class="w3-col m16 w3-padding-large" id="regForm" action="/submitted/" method='POST'>
+  {% csrf_token %} <!-- Include the CSRF token for security -->
+  <div class="tab">
+    <h5 class="w3-left">When can you meet us for your <b>free</b> orientation?</h5>
+      {{form.date}}
+      {{form.time}}
+      <!-- Time options will be dynamically populated based on the selected date -->
+    </select>
+  </div>
+
+  <div class="tab">
+    <h5 class="w3-left">Which location is best for you?</h5>
+    <select class="w3-input w3-padding-16" id="location" name="location">
+        <option value="957 McLean Ave, Yonkers, NY 10704 Suite 102">957 McLean Ave, Yonkers, NY 10704 Suite 102</option>
+        <option value="55 E 115th St, New York, NY 10029 Level-C">55 E 115th St, New York, NY 10029 Level-C</option>
+    </select>
+  </div>
+
+    <!-- One "tab" for each step in the form: -->
+  <div class="tab">
+    <p>{{ form.first_name }}</p>
+    <p>{{ form.last_name }}</p>
+    <p>{{ form.email }}</p>
+    <p>{{ form.phone }}</p>
+      <p class="w3-left">
+      By submitting this form, you agree that Enoch Recovery DDP Center may contact you via your provided phone number (call/text) or email to provide information related to the IDP/DDP program and other relevant services.
+      </p>
+  </div>
+  <div style="text-align:center;margin-top:40px;">
+    <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+    <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+  </div>
+
+    <!-- Circles which indicates the steps of the form: -->
+    <div style="text-align:center;margin-top:40px;">
+      <span class="step"></span>
+      <span class="step"></span>
+      <span class="step"></span>
+    </div>
+  </form>
+</div>
+  </div>
+
+
+  <div class="w3-col m4 w3-padding-large">
+  <div id="info" class="w3-center">
+    <h3><u>Yonkers, NY</u></h3>
+    <h5>957 McLean Ave, Yonkers, NY 10704 Suite 102</h5>
+    <iframe class="w3-round w3-image w3-opacity-min" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3015.5782701820253!2d-73.86897192331467!3d40.90306502589565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2f2e7706c9473%3A0x46c5e01bebded1ad!2sEnoch%20Recovery%20DDP%20Center!5e0!3m2!1sen!2sus!4v1698948003324!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <br>
+    <h3><u>New York, NY</u></h3>
+    <h5>55 E 115th St, New York, NY 10029 Level-C</h5>
+    <iframe class="w3-round w3-image w3-opacity-min" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1510.1544692547584!2d-73.94598731883863!3d40.79920447562772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2f60f81cf0aef%3A0xf6cf32c7969f7ffc!2s55%20E%20115th%20St%2C%20New%20York%2C%20NY%2010029!5e0!3m2!1sen!2sus!4v1699402292083!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</div>
+
+
+
+<!-- Javascript -->
+<script src="{% static "js/form.js" %}"></script>
+<script src="{% static "js/datetime.js" %}"></script>
+
+</body>
+</html>
+
+<!-- End page content -->
+
+{% endblock %}
