@@ -10,24 +10,12 @@ def home(request):
     }
     return render(request, "index.html", context)
 
-
-def testform(request):
-    if request.method == "POST":
-        form = OrientationRequestForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return render(request, "submitted.html", {"form": form})
-
-    else:
-        form = OrientationRequestForm()
-        return render(request, "testform.html", {"form": form})
-
-
 def submitted(request):
     if request.method == "POST":
         form = OrientationRequestForm(request.POST)
         if form.is_valid():
             form.save()  # Save to DB
+            
             return render(request, "submitted.html", {"form": form})
 
         else:
