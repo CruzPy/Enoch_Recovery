@@ -11,11 +11,11 @@ function setDefaultDateTime() {
 
         var selectedDayOfWeek = selectedDate.getDay();
         var timeSlots = {
-            1: ["5:30 PM", "6:00 PM", "6:30 PM"],
-            2: ["5:30 PM", "6:00 PM", "6:30 PM"],
-            3: ["5:30 PM", "6:00 PM", "6:30 PM"],
-            6: ["10:00 AM", "10:30 AM", "11:00 AM", "11:30 AM"],
-            7: ["2:30 PM", "3:00 PM", "3:30 PM"],
+            1: ["5:30 PM", "6:00 PM", "6:30 PM"], // Mon
+            2: ["5:30 PM", "6:00 PM", "6:30 PM"], // Tues
+            3: ["5:30 PM", "6:00 PM", "6:30 PM"], // Wed
+            6: ["10:00 AM", "10:30 AM", "11:00 AM", "11:30 AM"], // Sat
+            0: ["2:30 PM", "3:00 PM", "3:30 PM"], // Sun
         };
 
         // Remove existing time options
