@@ -5,15 +5,17 @@ from .forms import OrientationRequestForm
 # Create your views here.
 def home(request):
     form = OrientationRequestForm()
-    context = {
-        "form": form,
-    }
-    return render(request, "index.html", context)
-
+    return render(request, "index.html")
 
 def testimonials(request):
     return render(request, "testimonials.html")
 
+def contact(request):
+    form = OrientationRequestForm()
+    context = {
+        "form": form,
+    }
+    return render(request, "contact.html", context)
 
 def submitted(request):
     if request.method == "POST":
