@@ -1,0 +1,56 @@
+/* CSS to make images the same size */
+.mySlides img {
+    width: 400px;
+    height: 250px;
+    /* Adjust the height as needed */
+}
+
+/* Hide all slides by default */
+.mySlides {
+    display: none;
+}
+
+/* Additional CSS styles for animation */
+.fadeIn {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 aspect ratio (9 / 16 * 100) */
+    width: 100%;
+    /* Occupy full width of the parent container */
+    max-width: 800px;
+    /* Set a maximum width if needed */
+    margin: 0 auto;
+    /* Center the container horizontally */
+    margin-bottom: 50px;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1);
+}
+
+.mySlides img {
+    width: 800px;
+    height: 600px;
+    /* Adjust the height as needed */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1);
+    /* You can adjust the values to control the shadow's appearance */
+}

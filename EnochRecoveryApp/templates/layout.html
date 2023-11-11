@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="{% static "images/favicon.ico" %}">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link href="{% static "css/template.css" %}" rel="stylesheet">
 </head>
 <body>
 
@@ -16,8 +17,8 @@
     <a href="{% url 'home' %}" class="w3-bar-item w3-button">Enoch Recovery DDP</a>
     <!-- Right-sided navbar links. Hide them on small screens -->
     <div class="w3-right w3-hide-small">
-      <a href="#about" class="w3-bar-item w3-button">About</a>
-      <a href="#testimonials" class="w3-bar-item w3-button">Testimonials</a>
+      <a href={% url 'home'%} class="w3-bar-item w3-button">About Us</a>
+      <a href="{% url 'testimonials' %}" class="w3-bar-item w3-button">Testimonials</a>
       <a href="#contact" class="w3-bar-item w3-button">Contact</a>
     </div>
   </div>
