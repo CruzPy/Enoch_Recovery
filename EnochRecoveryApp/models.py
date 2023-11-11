@@ -9,7 +9,7 @@ class OrientationRequest(models.Model):
     email = models.EmailField(max_length=100)
     phone = PhoneField(blank=True, help_text="Contact phone number")
     date = models.DateField()
-    time = models.TimeField()
+    time = models.CharField(max_length=100)
     location = models.CharField(max_length=100)
 
     def __str__(self):

@@ -13,20 +13,18 @@ class OrientationRequestForm(forms.ModelForm):
                     "class": "w3-input w3-padding-16",
                     "id": "id_date",
                     "name": "date",
+                    "type":"date",
+                }
+            ),
+            "time":forms.Select(
+                attrs={
+                    "class": "w3-input w3-padding-16",
+                    "id": "id_time",
+                    "type": "text",
+                    "required": True,
                 }
             ),
         }
-
-    time = forms.CharField(
-        widget=forms.TextInput(
-            attrs={
-                "class": "w3-input w3-padding-16",
-                "id": "id_time",
-                "type": "text",
-                "required": True,
-            }
-        )
-    )
 
     first_name = forms.CharField(
         widget=forms.TextInput(
