@@ -154,3 +154,10 @@ button:hover {
 .w3-btn:hover {
     opacity: 0.8;
 }
+
+#regForm {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1);
+    border-radius: 6px;
+    border:black;
+    background-color: rgb(236, 236, 236)
+}

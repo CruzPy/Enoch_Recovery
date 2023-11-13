@@ -25,7 +25,7 @@
   <form class="w3-col m16 w3-padding-large" id="regForm" action="/submitted/" method='POST'>
   {% csrf_token %} <!-- Include the CSRF token for security -->
   <div class="tab">
-    <h5 class="w3-left">When can you meet us for your <b>free</b> orientation?</h5>
+    <h5 class="w3-center">When can you meet us for your <b>free</b> orientation?</h5>
       {{form.date}}
       {{form.time}}
       <!-- Time options will be dynamically populated based on the selected date -->
@@ -33,7 +33,7 @@
   </div>
 
   <div class="tab">
-    <h5 class="w3-left">Which location is best for you?</h5>
+    <h5 class="w3-center">Which location is best for you?</h5>
     <select class="w3-input w3-padding-16" id="location" name="location">
         <option value="957 McLean Ave, Yonkers, NY 10704 Suite 102">957 McLean Ave, Yonkers, NY 10704 Suite 102</option>
         <option value="55 E 115th St, New York, NY 10029 Level-C">55 E 115th St, New York, NY 10029 Level-C</option>
@@ -46,7 +46,7 @@
     <p>{{ form.last_name }}</p>
     <p>{{ form.email }}</p>
     <p>{{ form.phone }}</p>
-      <p class="w3-left">
+      <p class="w3-center">
       By submitting this form, you agree that Enoch Recovery DDP Center may contact you via your provided phone number (call/text) or email to provide information related to the IDP/DDP program and other relevant services.
       </p>
   </div>
@@ -65,7 +65,7 @@
 </div>
   </div>
 
-  <div class="w3-col m4 w3-padding-large w3-hide-small">
+  <div class="w3-col m4 l6 w3-padding-large w3-hide-small">
   <div id="info" class="w3-center">
     <h3><u>Yonkers, NY</u></h3>
     <h5>957 McLean Ave, Yonkers, NY 10704 Suite 102</h5>
