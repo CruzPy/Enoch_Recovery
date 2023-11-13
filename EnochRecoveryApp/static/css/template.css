@@ -161,3 +161,7 @@ button:hover {
     border:black;
     background-color: rgb(236, 236, 236)
 }
+
+.submitted-content{
+    margin-top: 50px;
+}
