@@ -3,6 +3,13 @@ body {
     scroll-behavior: smooth;
 }
 
+img {
+    width: 800px;
+    height: 480px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1);
+    border-radius: 10%;
+}
+
 h1,
 h2,
 h3,
@@ -14,9 +21,12 @@ h6 {
 }
 
 #section{
-    background-color: #c7c9c9;
+    background-color: #b6b8b8;
     border-radius: 10px;
-    box-shadow: 10px 10px 5px rgb(214, 228, 233);
+    box-shadow: 10px 10px 5px rgb(190, 209, 216);
+    color: rgb(255, 255, 255);
+    text-shadow: rgb(0, 0, 0) 1px 0 10px;
+    border: 1px solid black;
 }
 
 input {
@@ -40,6 +50,7 @@ input.invalid {
 button {
     background-color: #04AA6D;
     color: #ffffff;
+    text-shadow: rgb(0, 0, 0) 1px 0 10px;
     border: none;
     padding: 10px 20px;
     font-size: 17px;
@@ -129,4 +140,17 @@ button:hover {
         display: block;
         text-align: left;
     }
+}
+
+.w3-btn{
+    width: 75%;
+    height: 50px;
+    border-radius: 12px;
+    font-size: 20px;
+    text-shadow: rgb(0, 0, 0) 1px 0 10px;
+    margin-top:30px;
+}
+
+.w3-btn:hover {
+    opacity: 0.8;
 }

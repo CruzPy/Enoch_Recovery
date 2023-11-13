@@ -1,21 +1,22 @@
-var shortText = document.getElementById('short-text');
-var fullText = document.getElementById('full-text');
-var msg = document.getElementById('msg');
-var readMoreLink = document.getElementById('read-more-link');
-var isExpanded = false;
+document.addEventListener('DOMContentLoaded', function () {
+    var shortText = document.getElementById('short-text');
+    var fullText = document.getElementById('full-text');
+    var img = document.getElementById('img');
+    var msg = document.getElementById('msg');
+    var readMoreLink = document.getElementById('read-more-link');
+    var isExpanded = false;
 
-function toggleText() {
-    if (isExpanded) {
-        shortText.style.display = 'block';
-        msg.style.display = 'block'; // Show the "Message From Our Director" text
-        fullText.style.display = 'none';
-        readMoreLink.innerText = 'Read More';
-        isExpanded = false;
-    } else {
-        shortText.style.display = 'none';
-        fullText.style.display = 'block';
-        readMoreLink.innerText = 'Read Less';
-        msg.style.display = 'none'; // Hide the "Message From Our Director" text
-        isExpanded = true;
+    function toggleText() {
+        isExpanded = !isExpanded; // Toggle the value
+
+        shortText.style.display = isExpanded ? 'none' : 'block';
+        fullText.style.display = isExpanded ? 'block' : 'none';
+        img.style.display = isExpanded ? 'block' : 'none';
+        msg.style.display = isExpanded ? 'none' : 'block';
+
+        readMoreLink.innerText = isExpanded ? 'Read Less' : 'Read More';
     }
-}
+
+    // Add a click event listener to the "Read More" link
+    readMoreLink.addEventListener('click', toggleText);
+});

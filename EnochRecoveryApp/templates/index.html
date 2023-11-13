@@ -25,7 +25,8 @@
 <!-- Enoch Section -->
 <div class="w3-row">
 <div class="w3-col m6 w3-padding-large">
-  <img src="{% static 'images/class.jpg' %}" class="w3-round w3-image w3-opacity-min" alt="Class" width="600" height="750">
+  <img src="{% static 'images/class.jpg' %}" class="w3-round w3-image w3-opacity-min w3-hide-small" alt="Class" width="600" height="750">
+  <img id="img" src="{% static 'images/enoch_now.jpg' %}" class="w3-round w3-image w3-opacity-min" alt="enoch_now" width="600" height="750" style="margin-top: 30px; display: none;">
 </div>
 
 <div class="w3-col m6 w3-padding-large">
@@ -60,7 +61,7 @@
 </div>
 
 <div class="w3-center w3-row">
-  <a href={% url 'contact'%} class="w3-btn w3-green" id="contact-btn" style="width: 40%; height: 40px; border-radius: 12px; font-size: large;">Free Orientation</a>
+  <a href={% url 'contact'%} class="w3-btn w3-green" id="contact-btn">Free Orientation</a>
 </div>
 
 <!-- Javascript -->
