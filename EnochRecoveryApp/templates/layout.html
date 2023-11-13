@@ -17,12 +17,30 @@
     <a href="{% url 'home' %}" class="w3-bar-item w3-button">Enoch Recovery DDP</a>
     <!-- Right-sided navbar links. Hide them on small screens -->
     <div class="w3-right w3-hide-small">
-      <a href={% url 'home'%} class="w3-bar-item w3-button">About Us</a>
-      <a href={% url 'testimonials'%} class="w3-bar-item w3-button">Testimonials</a>
-      <a href={% url 'contact'%} class="w3-bar-item w3-button">Contact</a>
+      <a href="{% url 'home'%}" class="w3-bar-item w3-button">About Us</a>
+      <a href="{% url 'testimonials'%}" class="w3-bar-item w3-button">Testimonials</a>
+      <a href="{% url 'contact'%}" class="w3-bar-item w3-button">Contact</a>
+    </div>
+    <!-- Dropdown link for small screens -->
+    <div class="w3-dropdown-click w3-right w3-hide-medium w3-hide-large">
+      <button class="w3-button w3-padding-16 w3-right" onclick="toggleDropdown()">☰</button>
+      <div class="w3-dropdown-content w3-bar-block w3-card" id="myDropdown">
+        <a href="{% url 'home'%}" class="w3-bar-item w3-button">About Us</a>
+        <a href="{% url 'testimonials'%}" class="w3-bar-item w3-button">Testimonials</a>
+        <a href="{% url 'contact'%}" class="w3-bar-item w3-button">Contact</a>
+      </div>
     </div>
   </div>
 </div>
+
+<!-- Your existing JavaScript for dropdown functionality -->
+<script>
+function toggleDropdown() {
+  var dropdown = document.getElementById("myDropdown");
+  dropdown.classList.toggle("w3-show");
+}
+</script>
+
 
 <!-- Content Section -->
 <div class="w3-content fadeIn" style="max-width:1100px">

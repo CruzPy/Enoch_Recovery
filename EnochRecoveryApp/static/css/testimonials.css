@@ -1,13 +1,22 @@
 /* CSS to make images the same size */
 .mySlides img {
-    width: 400px;
-    height: 250px;
-    /* Adjust the height as needed */
+    width: 800px;
+    height: 480px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1);
 }
 
 /* Hide all slides by default */
 .mySlides {
     display: none;
+}
+
+.mySlides p {
+    background-color: #e8e9e9;
+    height: 30%;
+    width: 100%;
+    font-family:cursive;
+    font-size: large;
+    border-radius: 12px;
 }
 
 .video-container {
@@ -16,26 +25,17 @@
     /* 16:9 aspect ratio (9 / 16 * 100) */
     width: 100%;
     /* Occupy full width of the parent container */
-    max-width: 800px;
-    /* Set a maximum width if needed */
     margin: 0 auto;
     /* Center the container horizontally */
+    margin-top: 30px;
     margin-bottom: 50px;
 }
 
 .video-container iframe {
     position: absolute;
-    top: 0;
+    top: 0px;
     left: 0;
     width: 100%;
     height: 100%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1);
-}
-
-.mySlides img {
-    width: 800px;
-    height: 600px;
-    /* Adjust the height as needed */
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1);
-    /* You can adjust the values to control the shadow's appearance */
 }

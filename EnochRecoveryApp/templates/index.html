@@ -4,11 +4,11 @@
 <body>
 <!-- About Section -->
 <div class="w3-row w3-padding-64 fadeIn" id="about">
-  <div class="w3-col m6 w3-padding-large w3-hide-small">
+  <div class="w3-col m6 w3-padding-large">
     <img src="{% static 'images/group.jpg' %}" class="w3-round w3-image w3-opacity-min" alt="Class" width="600" height="750">
   </div>
   <div class="w3-col m6 w3-padding-large">
-    <h1 class="w3-center">Welcome to Enoch Recovery DDP Center</h1><br>
+    <h1 class="w3-center" id="section">Welcome to Enoch Recovery DDP Center</h1><br>
     <p class="w3-center">Our Impaired Driver Program (IDP), also known as the Drinking Driver Program (DDP), is dedicated to helping individuals on their journey to recovery from alcohol and drug-related issues. We provide comprehensive therapy and support to empower you to make positive changes and build a better future.</p>
     <p>To participate in our IDP program, you'll need to follow these steps:</p>
     <ul>
@@ -29,7 +29,7 @@
 </div>
 
 <div class="w3-col m6 w3-padding-large">
-<h1 class="w3-center" id="msg">Message From Our Director</h1><br>
+<div id="section"><h1 class="w3-center" id="msg">Message From Our Director</h1><br></div>
 <div class="w3-text-container">
   <div class="w3-text-content" id="short-text">
     <p>
@@ -57,6 +57,10 @@
   <a href="javascript:void(0);" id="read-more-link" onclick="toggleText()">Read More</a>
 </div>
 </div>
+</div>
+
+<div class="w3-center w3-row">
+  <a href={% url 'contact'%} class="w3-btn w3-green" id="contact-btn" style="width: 40%; height: 40px; border-radius: 12px; font-size: large;">Free Orientation</a>
 </div>
 
 <!-- Javascript -->
