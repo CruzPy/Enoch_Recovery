@@ -6,6 +6,7 @@ from .serializers import OrientationRequestSerializer
 from rest_framework import viewsets
 from rest_framework import permissions
 from .helper_functions import create_calendar_inv
+from .smtp import send_orientation_email
 
 
 # Create your views here.
@@ -26,19 +27,38 @@ def contact(request):
     return render(request, "contact.html", context)
 
 
+from django.shortcuts import render, redirect
+from django.contrib import messages
+from .models import OrientationRequest
+
+
 def submitted(request):
     if request.method == "POST":
         form = OrientationRequestForm(request.POST)
         if form.is_valid():
-            form.save()  # Save to DB
+            email = form.cleaned_data["email"]
 
+            # Check if an entry with the given email already exists
+            if OrientationRequest.objects.filter(email=email).exists():
+                # Entry already exists, show an error message
+                messages.error(request, "Form has already been submitted.")
+                return redirect("contact")
+
+            # Save the form to the database
+            form.save()
+
+            cleaned_form = form.cleaned_data
             # Create google calendar inv
             google_link = create_calendar_inv(
-                form.cleaned_data["date"],
-                form.cleaned_data["time"],
-                form.cleaned_data["location"],
+                cleaned_form["date"],
+                cleaned_form["time"],
+                cleaned_form["location"],
             )
 
+            # Send email notification to enoch and client
+            send_orientation_email(cleaned_form, google_link)
+
+            # Store vars into content
             content = {
                 "form": form,
                 "calendar_inv": google_link,
@@ -50,9 +70,7 @@ def submitted(request):
             print("Form is invalid")
             messages.error(request, "Form is invalid. Please resubmit.")
 
-            return redirect(
-                "contact"
-            )  # Redirect to the contact view if it's not a POST request
+    return redirect("contact")
 
 
 class OrientationRequestViewSet(viewsets.ModelViewSet):

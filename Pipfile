@@ -8,6 +8,10 @@ django = "*"
 django-phone-field = "*"
 mysqlclient = "*"
 djangorestframework = "*"
+google-auth = "*"
+google-auth-httplib2 = "*"
+google-auth-oauthlib = {extras = ["tool"], version = "*"}
+google-api-python-client = "*"
 
 [dev-packages]
 
