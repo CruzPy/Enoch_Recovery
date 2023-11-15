@@ -22,10 +22,9 @@ def submitted(request):
         form = OrientationRequestForm(request.POST)
         if form.is_valid():
             form.save()  # Save to DB
-
             return render(request, "submitted.html", {"form": form})
 
         else:
             print("Form is invalid")
 
-    return redirect("home")  # Redirect to the home view if it's not a POST request
+    return redirect("contact")  # Redirect to the contact view if it's not a POST request

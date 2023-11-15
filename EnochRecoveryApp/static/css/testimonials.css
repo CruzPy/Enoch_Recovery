@@ -9,6 +9,7 @@
     width: 100%;
     font-family:cursive;
     font-size: large;
+    border-radius: 12px;
 }
 
 .video-container {
