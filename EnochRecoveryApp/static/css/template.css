@@ -1,5 +1,5 @@
 body {
-    background-color: #f1f1f1;
+    background-color: #e6e5e5;
     scroll-behavior: smooth;
 }
 
@@ -26,7 +26,6 @@ h6 {
     box-shadow: 10px 10px 5px rgb(190, 209, 216);
     color: rgb(255, 255, 255);
     text-shadow: rgb(0, 0, 0) 1px 0 10px;
-    border: 1px solid black;
 }
 
 input {
@@ -142,13 +141,13 @@ button:hover {
     }
 }
 
-.w3-btn{
+.w3-btn {
     width: 75%;
     height: 50px;
     border-radius: 12px;
     font-size: 20px;
     text-shadow: rgb(0, 0, 0) 1px 0 10px;
-    margin-top:30px;
+    margin-top: 30px;
 }
 
 .w3-btn:hover {
@@ -158,10 +157,10 @@ button:hover {
 #regForm {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1);
     border-radius: 6px;
-    border:black;
+    border: black;
     background-color: rgb(236, 236, 236)
 }
 
-.submitted-content{
+.submitted-content {
     margin-top: 50px;
 }
