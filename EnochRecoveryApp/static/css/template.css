@@ -10,6 +10,11 @@ img {
     border-radius: 10%;
 }
 
+.error{
+    color:red;
+    font-weight: bold;
+}
+
 h1,
 h2,
 h3,

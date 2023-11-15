@@ -1,29 +1,23 @@
 {% extends "layout.html" %}
 {% block content %}
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Thank You for Your Submission</title>
-</head>
-<body>
-    <div class="submitted-content">
-    <div class="w3-row w3-padding-64">
-        <h1>Thank You {{ form.first_name.value }} </h1>
-        <h4>We look foward to meeting you on <b>{{ form.date.value }}</b> at <b>{{ form.time.value }}</b> at <b>{{form.location.value}}</b></h4>
-    </div>
+
+<div class="submitted-content" style="margin-left:30px; ">
+<div class="w3-row w3-padding-32">
+    <h1>Thank You {{ form.first_name.value }}, </h1>
+    <h4 style="letter-spacing:1px;">We look foward to meeting you on <b>{{ form.date.value }}</b> at <b>{{ form.time.value }}</b> at <b>{{form.location.value}}</b></h4>
+</div>
 
 <!-- Google Calendar Link -->
-<a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Enoch%20DDP%20Orientation&dates=20231112T120000Z/20231112T140000Z&details=Event%20Description&location=Event%20Location&sf=true&output=xml"
-   target="_blank" rel="noopener noreferrer">
-   Add to Google Calendar
-</a>
-
-    <div class="w3-row w3-padding-16">
-        <h5>If you would like to reschedule your orientation please contact us below:</h5>
-        <h5>Email: <a href="mailto:justint140@hotmail.com"><b>justint140@hotmail.com</a></b></h5>
-        <h5>Cell: <b><a href="tel:9176352875">(917) 635-2875</b></a></h5>
-  </div>
+<div class="w3-row">
+    <a class="w3-padding-large w3-center" id="section" href={{calendar_inv}} target="_blank" rel="noopener noreferrer">
+    Add to Google Calendar
+    </a>
 </div>
-</body>
-</html>
+
+<div class="w3-row w3-padding-32">
+    <h5>If you would like to reschedule your orientation please contact us below:</h5>
+    <h5>Email: <a href="mailto:justint140@hotmail.com"><b>justint140@hotmail.com</a></b></h5>
+    <h5>Cell: <b><a href="tel:9176352875">(917) 635-2875</b></a></h5>
+</div>
+</div>
 {% endblock %}
