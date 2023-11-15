@@ -26,6 +26,7 @@ h6 {
     box-shadow: 10px 10px 5px rgb(190, 209, 216);
     color: rgb(255, 255, 255);
     text-shadow: rgb(0, 0, 0) 1px 0 10px;
+    height: 100%;
 }
 
 input {
@@ -110,6 +111,9 @@ button:hover {
 
 /* Media query for screens with a maximum width of 600px (typical for iPhones) */
 @media only screen and (max-width: 600px) {
+    form{
+        font-size: 12px;
+    }
 
     /* Styles for smaller screens, e.g., iPhones */
     .w3-bar-item {
@@ -148,6 +152,7 @@ button:hover {
     font-size: 20px;
     text-shadow: rgb(0, 0, 0) 1px 0 10px;
     margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .w3-btn:hover {
@@ -163,4 +168,8 @@ button:hover {
 
 .submitted-content {
     margin-top: 50px;
+}
+
+footer {
+    width: 100%;
 }

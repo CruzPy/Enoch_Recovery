@@ -34,23 +34,19 @@
 </div>
 
 <!-- Your existing JavaScript for dropdown functionality -->
-<script>
-function toggleDropdown() {
-  var dropdown = document.getElementById("myDropdown");
-  dropdown.classList.toggle("w3-show");
-}
-</script>
 
 
 <!-- Content Section -->
-<div class="w3-content fadeIn" style="max-width:1100px">
+<div class="w3-content fadeIn w3-light-grey" style="max-width:1100px">
   {% block content %}{% endblock %}
 </div>
 
 <!-- Footer -->
-<footer class="w3-center w3-light-grey w3-padding-32">
+<footer class="w3-center w3-white w3-padding-32">
   <p>All rights reserved by Enoch Recovery DDP Center</p>
 </footer>
   
+<script src="{% static "js/dropdown.js" %}"> </script>
+
 </body>
 </html>
