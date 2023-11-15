@@ -9,7 +9,7 @@ from requests import HTTPError
 # Notification system for client and enoch
 def send_orientation_email(receiver_info, google_link):
     SCOPES = ["https://www.googleapis.com/auth/gmail.send"]
-    credentials_path = os.path.join(os.path.dirname(__file__), "credentials.json")
+    credentials_path = os.path.join(os.path.dirname(__file__), "creds/credentials.json")
     flow = InstalledAppFlow.from_client_secrets_file(credentials_path, SCOPES)
     creds = flow.run_local_server(port=0)
 
