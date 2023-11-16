@@ -1,10 +1,10 @@
 # Enoch_Recovery Features:
 ```
-Clone repo in working directory and open terminal
+# Clone repo in working directory and open terminal
 pipenv shell
 pipenv install dev
 
-Ensure MySQL DB is correctly configured as well as settings.py 
+# Ensure MySQL DB is correctly configured as well as settings.py 
 python manage.py makemigrations
 python manage.py migrate
 python manage.py runserver
