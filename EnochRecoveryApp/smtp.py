@@ -21,6 +21,7 @@ def send_orientation_email(receiver_info, google_link):
             <body>
             <h3>Hi {receiver_info['first_name']},</h3>
                 <p>Thank you for registering for our impaired driver program orientation.</p>
+                <p>Please do not forget to bring your <b>arrest packet</b> and <b>$233</b> in order to register for the program.</p>
                 <p>Orientation Appointment:</p>
                 <ul>
                     <li>Date: {receiver_info['date']}</li>
@@ -77,54 +78,6 @@ def send_orientation_email(receiver_info, google_link):
     message["to"] = "hcruz.py@gmail.com"  # TODO: Change to Enochs address
     message["bcc"] = "enochrecoveryddp@gmail.com"
     message["subject"] = "New Orientation Request"
-
-    create_message = {"raw": base64.urlsafe_b64encode(message.as_bytes()).decode()}
-
-    try:
-        message = (
-            service.users().messages().send(userId="me", body=create_message).execute()
-        )
-        print(f'sent message to {message} Message Id: {message["id"]}')
-    except HTTPError as error:
-        print(f"An error occurred: {error}")
-        message = None
-
-
-# Notification system for enoch
-def send_orientation_email_enoch(receiver_info, google_link):
-    SCOPES = ["https://www.googleapis.com/auth/gmail.send"]
-    credentials_path = os.path.join(os.path.dirname(__file__), "credentials.json")
-    flow = InstalledAppFlow.from_client_secrets_file(credentials_path, SCOPES)
-    creds = flow.run_local_server(port=0)
-
-    service = build("gmail", "v1", credentials=creds)
-
-    # Create MIMEText object with HTML formatting
-    message = MIMEText(
-        f"""<html>
-            <body>
-            <h3>Hi Enoch,</h3>
-                <p>{receiver_info['first_name']} {receiver_info['last_name']} has registered for orientation</p>
-                <p>Here is {receiver_info['first_name']}'s contact info:</p>
-                <ul>
-                    <li>Phone:<a href="tel:{receiver_info['phone']}">{receiver_info['phone']}</a></li>
-                    <li>Email: {receiver_info['email']}</li>
-                </ul>
-                <p>Orientation Appointment:</p>
-                <ul>
-                    <li>Date: {receiver_info['date']}</li>
-                    <li>Time: {receiver_info['time']}</li>
-                    <li>Location: {receiver_info['location']}</li>
-                </ul>
-                <p><a href="{google_link}">Save to Google Calendar</a></p>
-            </body>
-        </html>""",
-        "html",
-    )
-
-    # Set headers for the message
-    message["to"] = "hcruz.py@gmail.com"  # TODO: Change to Enochs address
-    message["subject"] = "Enoch Recovery Orientation"
 
     create_message = {"raw": base64.urlsafe_b64encode(message.as_bytes()).decode()}
 

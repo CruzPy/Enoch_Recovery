@@ -5,13 +5,12 @@ from .forms import OrientationRequestForm
 from .serializers import OrientationRequestSerializer
 from rest_framework import viewsets
 from rest_framework import permissions
-from .helper_functions import create_calendar_inv
+from .create_calendar_inv import create_calendar_inv
 from .smtp import send_orientation_email
 
 
 # Create your views here.
 def home(request):
-    form = OrientationRequestForm()
     return render(request, "index.html")
 
 
