@@ -19,17 +19,12 @@ def testimonials(request):
     return render(request, "testimonials.html")
 
 
-def contact(request):
+def orientation(request):
     form = OrientationRequestForm()
     context = {
         "form": form,
     }
-    return render(request, "contact.html", context)
-
-
-from django.shortcuts import render, redirect
-from django.contrib import messages
-from .models import OrientationRequest
+    return render(request, "orientation.html", context)
 
 
 def submitted(request):
