@@ -18,6 +18,10 @@ def testimonials(request):
     return render(request, "testimonials.html")
 
 
+def locations(request):
+    return render(request, "location.html")
+
+
 def orientation(request):
     form = OrientationRequestForm()
     context = {

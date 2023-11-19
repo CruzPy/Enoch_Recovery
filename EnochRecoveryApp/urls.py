@@ -10,6 +10,7 @@ router.register(
 urlpatterns = [
     path("", views.home, name="home"),
     path("testimonials/", views.testimonials, name="testimonials"),
+    path("locations/", views.locations, name="locations"),
     path("orientation/", views.orientation, name="orientation"),
     path("submitted/", views.submitted, name="submitted"),
     # API
