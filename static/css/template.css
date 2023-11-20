@@ -1,0 +1,180 @@
+body {
+    background-color: #e6e5e5;
+    scroll-behavior: smooth;
+}
+
+img {
+    width: 800px;
+    height: 480px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1);
+    border-radius: 10%;
+}
+
+.error{
+    color:red;
+    font-weight: bold;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Times New Roman', serif;
+    letter-spacing: 5px;
+}
+
+#section{
+    background-color: #abcbcb;
+    border-radius: 10px;
+    box-shadow: 3px 5px 10px rgb(190, 209, 216);
+    color: rgb(255, 255, 255);
+    height: 100%;
+    text-shadow: 0px 0px 12px black;
+}
+
+input {
+    padding: 10px;
+    width: 100%;
+    font-size: 17px;
+    font-family: Raleway;
+    border: 1px solid #aaaaaa;
+}
+
+/* Mark input boxes that gets an error on validation: */
+input.invalid {
+    background-color: #ffdddd;
+}
+
+/* Hide all steps by default: */
+.tab {
+    display: none;
+}
+
+button {
+    background-color: #04AA6D;
+    color: #ffffff;
+    text-shadow: rgb(0, 0, 0) 1px 0 10px;
+    border: none;
+    padding: 10px 20px;
+    font-size: 17px;
+    font-family: Raleway;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+#prevBtn {
+    background-color: #bbbbbb;
+}
+
+/* Make circles that indicate the steps of the form: */
+.step {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbbbbb;
+    border: none;
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.5;
+}
+
+.step.active {
+    opacity: 1;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+    background-color: #04AA6D;
+}
+
+/* Additional CSS styles for animation */
+.fadeIn {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Default styles for navigation */
+.w3-bar-item {
+    display: block;
+    text-align: center;
+}
+
+/* Media query for screens with a maximum width of 600px (typical for iPhones) */
+@media only screen and (max-width: 600px) {
+    form{
+        font-size: 12px;
+    }
+
+    /* Styles for smaller screens, e.g., iPhones */
+    .w3-bar-item {
+        display: none;
+        /* Hide the default navigation items on small screens */
+    }
+
+    .w3-dropdown-click {
+        display: block;
+        /* Display the dropdown link on small screens */
+    }
+
+    /* Additional styles for the dropdown content */
+    .w3-dropdown-content {
+        position: absolute;
+        background-color: #f9f9f9;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        left: 0;
+        width: 100%;
+        /* Position the dropdown content at the left edge */
+    }
+
+    .w3-dropdown-content a {
+        float: none;
+        /* Make dropdown items full width */
+        display: block;
+        text-align: left;
+    }
+}
+
+.w3-btn {
+    width: 75%;
+    height: 50px;
+    border-radius: 12px;
+    font-size: 20px;
+    text-shadow: rgb(0, 0, 0) 1px 0 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.w3-btn:hover {
+    opacity: 0.8;
+}
+
+#regForm {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1);
+    border-radius: 6px;
+    border: black;
+    background-color: rgb(236, 236, 236)
+}
+
+.submitted-content {
+    margin-top: 50px;
+}
+
+footer {
+    width: 100%;
+}
