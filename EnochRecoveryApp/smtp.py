@@ -30,7 +30,7 @@ def send_orientation_email(receiver_info, google_link):
                 </ul>
                 <p><a href="{google_link}">Save to Google Calendar</a></p>
             <h5>If you would like to reschedule your orientation please contact us below:</h5>
-            <h5>Email: <a href="mailto:justint140@hotmail.com"><b>justint140@hotmail.com</a></b></h5>
+            <h5>Email: <a href="mailto:enochrecoveryddp@gmail.com"><b>enochrecoveryddp@gmail.com</a></b></h5>
             <h5>Cell: <b><a href="tel:9176352875">(917) 635-2875</b></a></h5>
             </body>
         </html>""",
@@ -75,8 +75,7 @@ def send_orientation_email(receiver_info, google_link):
     )
 
     # Set headers for the message
-    message["to"] = "hcruz.py@gmail.com"  # TODO: Change to Enochs address
-    message["bcc"] = "enochrecoveryddp@gmail.com"
+    message["to"] = "enochrecoveryddp@gmail.com"  # TODO: Change to Enochs address
     message["subject"] = "New Orientation Request"
 
     create_message = {"raw": base64.urlsafe_b64encode(message.as_bytes()).decode()}

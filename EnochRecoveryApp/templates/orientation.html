@@ -46,9 +46,9 @@
     <p>{{ form.last_name }}</p>
     <p>{{ form.email }}</p>
     <p>{{ form.phone }}</p>
-      <p class="w3-center">
-      By submitting this form, you agree that Enoch Recovery DDP Center may contact you via your provided phone number (call/text) or email to provide information related to the IDP/DDP program and other relevant services.
-      </p>
+    <p>
+      By submitting this form, you agree to the <a href="{% url 'policy'%}">Privacy Policy</a> which states that Enoch Recovery DDP Center may contact you to provide information related to the IDP/DDP program and other relevant services.
+    </p>
   </div>
   <div style="text-align:center;margin-top:40px;">
     <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>

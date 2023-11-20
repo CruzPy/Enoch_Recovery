@@ -22,6 +22,10 @@ def locations(request):
     return render(request, "location.html")
 
 
+def policy(request):
+    return render(request, "policy.html")
+
+
 def orientation(request):
     form = OrientationRequestForm()
     context = {
@@ -40,10 +44,10 @@ def submitted(request):
             if OrientationRequest.objects.filter(email=email).exists():
                 # Entry already exists, show an error message
                 messages.error(request, "Form has already been submitted.")
-                return redirect("contact")
+                return redirect("orientation")
 
             # Save the form to the database
-            form.save()
+            # form.save() # Enoch does not want to store user data
 
             cleaned_form = form.cleaned_data
             # Create google calendar inv
@@ -68,7 +72,7 @@ def submitted(request):
             print("Form is invalid")
             messages.error(request, "Form is invalid. Please resubmit.")
 
-    return redirect("contact")
+    return redirect("orientation")
 
 
 class OrientationRequestViewSet(viewsets.ModelViewSet):
