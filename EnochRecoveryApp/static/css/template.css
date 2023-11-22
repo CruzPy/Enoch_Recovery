@@ -1,5 +1,5 @@
 body {
-    background-color: #e6e5e5;
+    background-color: #abcbcb;
     scroll-behavior: smooth;
 }
 
@@ -10,8 +10,8 @@ img {
     border-radius: 10%;
 }
 
-.error{
-    color:red;
+.error {
+    color: red;
     font-weight: bold;
 }
 
@@ -25,7 +25,7 @@ h6 {
     letter-spacing: 5px;
 }
 
-#section{
+#section {
     background-color: #abcbcb;
     border-radius: 10px;
     box-shadow: 3px 5px 10px rgb(190, 209, 216);
@@ -53,7 +53,7 @@ input.invalid {
 }
 
 button {
-    background-color: #04AA6D;
+    background-color: #627f75;
     color: #ffffff;
     text-shadow: rgb(0, 0, 0) 1px 0 10px;
     border: none;
@@ -116,7 +116,7 @@ button:hover {
 
 /* Media query for screens with a maximum width of 600px (typical for iPhones) */
 @media only screen and (max-width: 600px) {
-    form{
+    form {
         font-size: 12px;
     }
 
