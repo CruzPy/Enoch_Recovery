@@ -1,8 +1,10 @@
 import base64
 import os.path
+import pickle  # Added import for pickle
 from email.mime.text import MIMEText
 from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
+from google.auth.transport.requests import Request  # Added import for Request
 from requests import HTTPError
 
 
@@ -10,8 +12,24 @@ from requests import HTTPError
 def send_orientation_email(receiver_info, google_link):
     SCOPES = ["https://www.googleapis.com/auth/gmail.send"]
     credentials_path = os.path.join(os.path.dirname(__file__), "creds/credentials.json")
-    flow = InstalledAppFlow.from_client_secrets_file(credentials_path, SCOPES)
-    creds = flow.run_local_server(port=0)
+
+    # Load or obtain new credentials
+    creds = None
+    token_pickle_path = os.path.join(os.path.dirname(__file__), "creds/token.pickle")
+    if os.path.exists(token_pickle_path):
+        with open(token_pickle_path, "rb") as token:
+            creds = pickle.load(token)
+
+    if not creds or not creds.valid:
+        if creds and creds.expired and creds.refresh_token:
+            creds.refresh(Request())
+        else:
+            flow = InstalledAppFlow.from_client_secrets_file(credentials_path, SCOPES)
+            creds = flow.run_local_server(port=0)
+
+        # Save the credentials for the next run
+        with open(token_pickle_path, "wb") as token:
+            pickle.dump(creds, token)
 
     service = build("gmail", "v1", credentials=creds)
 
